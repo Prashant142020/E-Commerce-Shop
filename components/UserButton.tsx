@@ -44,14 +44,14 @@ export default function UserButton({ user }: UserButtonProps) {
             </Link>
           </DropdownMenuItem>
           {/* TODO: Show this only for admins */}
-            { user.role === 'admin' &&
-          <DropdownMenuItem asChild>
+          {user.role === 'admin' && (
+            <DropdownMenuItem asChild>
               <Link href="/admin">
                 <Lock className="mr-2 h-4 w-4" />
                 Admin
               </Link>
-          </DropdownMenuItem>
-            }
+            </DropdownMenuItem>
+          )}
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
